@@ -15,12 +15,13 @@ body{
 
 .navbar{
     width:100%;
-    height: 7vh;
+    height: 6vh;
     display: flex;
     align-items: center;
     justify-content:space-around;
     background-color: aliceblue;
-    position: absolute;
+    position: fixed;
+    z-index: 1000;
 }
 
 /*------logo--------*/
@@ -154,9 +155,9 @@ body{
 /*---------main----*/
 
 main{
-    position: relative;
-    top: 7vh;
     width: 100%;
+    position: relative;
+    top: 6vh;
 }
 
 /*----------top----------*/
@@ -168,7 +169,6 @@ main{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    z-index: 1000;
 }
 
 /*--------top-description------*/
@@ -438,6 +438,7 @@ main{
     width: 50%;
     padding-top: 5%;
     padding-left: 5%;
+    padding-bottom: 5%;
 }
 
 /*-------community responsive------*/
@@ -539,6 +540,7 @@ main{
         width: 80%;
         padding: 0;
         padding-top: 1.5em;
+        padding-bottom: 1.5em;
     }
 
     /*-----community-button----*/
@@ -550,27 +552,25 @@ main{
         background-color: aquamarine;
         padding:8px 20px;
         margin-top: 3%;
-        margin-bottom: 1%;
+        margin-bottom: 3%;
         border-radius: 10px;
     }
 
 }
 
-
 /*--------Packages-----*/
 
 .packages{
     width: 100%;
-    height: 73vh;
     padding-left: 5%;
     padding-right: 5%;
+    padding-bottom: 3%;
     background-color: #f0efef;
 }
 
 .packages h1{
     font-size:2.5em;
     letter-spacing: 1px;
-    margin-top: 1em;
     font-weight: 700;
     padding-top: 0.5em
 
@@ -595,9 +595,8 @@ main{
 .packages .offers .p-1,
 .packages .offers .p-2,
 .packages .offers .p-3{
-    padding: 2% 0.2% 3% 2%;
+    padding: 2% 0.2% 2% 2%;
     width: 19%;
-    height: 57vh;
     margin-right: 1.5%;
     transition: 0.4s ease;
 }
@@ -615,7 +614,6 @@ main{
 .p-2-image,
 .p-3-image{
     width: 90%;
-    height: 50%;
 }
 
 /*-------offers description------*/
@@ -630,8 +628,7 @@ main{
 }
 
 .offers p{
-    padding-bottom: 3%;
-    height: 32%;
+    padding-bottom: 5%;
     letter-spacing: 0.5px;
 }
 
@@ -643,6 +640,7 @@ main{
     border-radius: 20px;
     transition: 0.3s ease;
     font-weight: 400;
+    margin-bottom: 3%;
 }
 
 .offers button:hover{
@@ -658,26 +656,121 @@ main{
 }
 
 .more .more3{
+    padding: 0.3em 0.7em;
+}
+
+/*-------packages responsive-------*/
+
+@media only screen and (max-width: 900px){
+    .packages h1{
+    font-size:2em;
+    letter-spacing: 0.8px;
+  }
+
+  .packages .offers{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+    .packages .offers .p-1,
+    .packages .offers .p-2,
+    .packages .offers .p-3{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    padding: 5% 0 3% 5%;
+    width: 80%;
+    margin-bottom: 5%;
+  }
+
+  .offers h3{
+    font-size: 1.5em;
+    letter-spacing: 0.8px;
+ }
+
+    .more{
+        width: 30%;
+    padding-top: 2%;
+    font-size: 1.4em;
+  }
+
+    .more .more3{
     padding: 0.3em 1em;
+  }
+
+  
+
+}
+
+@media only screen and (max-width: 1400px) and (min-width: 900px){
+
+    .packages h1{
+    font-size:2em;
+    letter-spacing: 0.8px;
+  }
+
+  .packages .offers{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+    .packages .offers .p-1,
+    .packages .offers .p-2,
+    .packages .offers .p-3{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    padding: 3% 0 3% 2%;
+    width: 30%;
+    margin-bottom: 5%;
+  }
+
+  .offers h3{
+    font-size: 1.5em;
+    letter-spacing: 0.8px;
+ }
+
+ .offers p{
+    height: 20vh;
+    padding-bottom: 3%;
+ }
+
+    .more{
+    padding-top: 2%;
+    font-size: 1em;
+  }
+
+    .more .more3{
+    padding: 0.3em 0.5em;
+  }
+}
+
+@media only screen and (min-width: 1500px){
+    .offers p{
+        height: 20vh;
+    }
+    
+
 }
 
 /*------footer---------*/
 
 footer{
-    padding-top: 5%;
+    padding-top: 3%;
     padding-left: 5%;
     padding-right: 5%;
-    margin-bottom: 5%;
-    height: 15vh;
+    margin-top: 7vh;
+    margin-bottom: 2%;
 }
 
 footer .contact{
-    padding-top: 0.5em;
     font-size: 1.8em;
 }
 
 footer .address{
     padding-top: 0.5em;
-    margin-bottom: 3%;
+    margin-bottom: 1.5%;
     font-size: 1.2em;
 }
